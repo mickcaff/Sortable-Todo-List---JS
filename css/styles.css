@@ -1,11 +1,12 @@
 :root {
-    --background1: #fafaf9;
+    --background1: hsl(225, 100%, 94%);
     --heading1: #1e3a8a;
     --primary1: #2563eb;
     --primary2: #0ea5e9;
     --primary3: #6d28d9;
     --primary4: #047857;
     --neutral1: #fafafa;
+    --neutral2: #9ca3af;
 }
 * {
     margin: 0;
@@ -14,14 +15,16 @@
     font-family: "League Spartan", sans-serif;
 }
 body {
-    background: var(--background1);
+    background-color: var(--background1);
+    background-image: url('../images/background-mobile.svg');
     background-repeat: no-repeat;
-    background-size: auto 100vh;
+    background-size: 100% 30vh;
     overflow: hidden;
 }
 .main-section {
-    border: 2px solid var(--primary1);
+    border: none;
     border-radius: 1rem;
+    box-shadow: 0 1.2rem 5rem -2rem var(--heading1);
     min-height: 400px;
     margin: 20% 5%;
     text-align: center;
@@ -48,6 +51,10 @@ body {
     font-size: 1rem;
     padding: 4px 0 0 1rem;
     margin-bottom: 0.5rem;
+}
+.input-field::placeholder{
+    color: var(--neutral2);
+    font-size: 0.9rem;
 }
 .input-btn {
     background-color: var(--primary1);
@@ -89,7 +96,7 @@ body {
     margin: 0 10px;
 }
 
-@media (min-width: 250px) and (max-width: 599px){
+@media (min-width: 250px) {
     .todo-item-text {
         font-size: 1rem;
     }
@@ -99,8 +106,14 @@ body {
 }
 
 @media (min-width: 600px){
+    body {
+        background-image: url('../images/background-desktop.svg');
+        background-repeat: no-repeat;
+        background-size: 100% 50vh;
+        overflow: hidden;
+    }
     .main-section {
-        max-width: 500px;
+        max-width: 400px;
         margin: 10% auto;
     }
 }

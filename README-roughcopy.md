@@ -71,7 +71,7 @@ Mobile View
 ### Font
 
 - Family: [League Spartan](https://fonts.google.com/specimen/League+Spartan)
-- Weights: 300, 400, 500, 700, 800
+- Weights: 400, 500, 700
 
 
 ## Useful resources
