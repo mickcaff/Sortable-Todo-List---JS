@@ -1,10 +1,13 @@
-# Frontend Mentor - Joke generator app solution
+# Sortable Todo List - JavaScript
+
+# In progress...
 
 Introduce the app and why I built this...
 
 ## Table of contents
 
-- [Frontend Mentor - Joke generator app solution](#frontend-mentor---joke-generator-app-solution)
+- [Sortable Todo List - JavaScript](#sortable-todo-list---javascript)
+- [In progress...](#in-progress)
   - [Table of contents](#table-of-contents)
   - [Overview](#overview)
     - [The challenge](#the-challenge)
