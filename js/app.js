@@ -28,7 +28,8 @@ listContainer.addEventListener('click', (e) => {
     e.target.nodeName === 'I' && e.target.parentNode.remove()
 })
 
-//DRAG and DROP Feature
+// DRAG and DROP Feature
+// The following listeners on the listContainer create the drag and drop functionality
 listContainer.addEventListener('dragstart', (e) => {
     dragged = e.target
     draggedIndex = Array.from(dragged.parentNode.childNodes).indexOf(dragged)
@@ -75,6 +76,7 @@ listContainer.addEventListener('drop', (e) => {
             } else {
                 targetSibling.before(dragged)
             }
+            targetSibling.classList.remove('dragover')
         }
     }
 })
