@@ -1,15 +1,16 @@
 :root {
-    --background1: #F2F2EB;
+    --background1: #fafaf9;
     --heading1: #1e3a8a;
     --primary1: #2563eb;
     --primary2: #0ea5e9;
     --primary3: #6d28d9;
     --primary4: #047857;
-    --neutral1: #f0f9ff;
+    --neutral1: #fafafa;
 }
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: "League Spartan", sans-serif;
 }
 body {
@@ -19,12 +20,13 @@ body {
     overflow: hidden;
 }
 .main-section {
-    border: 1px solid black;
+    border: 2px solid var(--primary1);
     border-radius: 1rem;
     min-height: 400px;
     margin: 20% 5%;
     text-align: center;
     background-color: white;
+    padding: 1rem 0 1.5rem;
 
 }
 .main-heading {
@@ -33,38 +35,41 @@ body {
 }
 #input-form {
     display: flex;
-    flex-direction: column;
-    margin: 1rem 10% 1.5rem;
+    position: relative;
+    margin: 1rem 5% 1.5rem;
+    justify-content: center;
+    align-content: flex-end;
 }
 .input-field {
     border: 2px solid var(--primary1);
     border-radius: 1rem;
     height: 32px;
+    width: 100%;
     font-size: 1rem;
-    padding-left: 1rem;
+    padding: 4px 0 0 1rem;
     margin-bottom: 0.5rem;
 }
 .input-btn {
     background-color: var(--primary1);
     border: none;
-    border-radius: 1rem;
+    border-radius: 1rem 1rem 1rem 1rem;
     color: white;
     cursor: pointer;
-    font-size: 1rem;
-    font-weight: 500;
     height: 32px;
-    width: 50%;
-    margin: 0 auto;
+    width: 54px;
+    padding-top: 4px;
+    position: absolute;
+    right: 0;
 }
 .todo-item-div {
-    background-color: var(--neutral1);
+    background-color: transparent;
     border: 2px solid var(--primary2);
     border-radius: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 32px;
-    margin: 0 10% 0.5rem;
+    min-height: 32px;
+    margin: 0 5% 0.5rem;
 }
 .dragover {
     border: 2px solid var(--primary3);
@@ -73,11 +78,24 @@ body {
     border: 2px solid green;
 }
 .todo-item-text {
+    color: var(--heading1);
+    font-size: 0.8rem;
     margin: 4px 0 0 1rem;
+    z-index: 0;
 }
-.fa-solid {
+.fa-delete-left, .fa-right-left {
+    color: var(--primary1);
     cursor: pointer;
-    margin-right: 1rem;
+    margin: 0 10px;
+}
+
+@media (min-width: 250px) and (max-width: 599px){
+    .todo-item-text {
+        font-size: 1rem;
+    }
+    .fa-delete-left, .fa-right-left {
+        margin: 0 20px;
+    }
 }
 
 @media (min-width: 600px){

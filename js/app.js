@@ -9,7 +9,9 @@ const addItem = (item) => {
     newItem.classList.add('dropzone')
     newItem.setAttribute('draggable', true)
     newItem.innerHTML = `
-    <span class="todo-item-text" >${item}</span> <i class="fa-solid fa-delete-left fa-sm"></i>
+    <i class="fa-solid fa-right-left fa-rotate-90 fa-xs"></i>
+    <span class="todo-item-text" >${item}</span> 
+    <i class="fa-solid fa-delete-left fa-sm"></i>
     `
     listContainer.appendChild(newItem)
 }
@@ -65,9 +67,21 @@ listContainer.addEventListener('dragover', (e) => {
 
 listContainer.addEventListener('drop', (e) => {
     e.preventDefault()
-    if (e.target.classList.contains('dropzone')){
-        if (e.target != dragged){
+    if ((e.target.classList.contains('dropzone')) || (e.target.classList.contains('todo-item-text')) || (e.target.classList.contains('fa-right-left'))) {
+        if ((e.target != dragged) && (e.target.classList.contains('dropzone'))){
             targetSibling = e.target
+            targetSiblingIndex = Array.from(targetSibling.parentNode.childNodes).indexOf(targetSibling)
+            console.log(targetSiblingIndex)
+            dragged.parentNode.removeChild(dragged)
+            if (draggedIndex < targetSiblingIndex){
+                targetSibling.after(dragged)
+            } else {
+                targetSibling.before(dragged)
+            }
+            targetSibling.classList.remove('dragover')
+        }
+        if ((e.target != dragged) && ((e.target.classList.contains('todo-item-text')) || (e.target.classList.contains('fa-right-left')))){
+            targetSibling = e.target.parentNode
             targetSiblingIndex = Array.from(targetSibling.parentNode.childNodes).indexOf(targetSibling)
             console.log(targetSiblingIndex)
             dragged.parentNode.removeChild(dragged)
@@ -81,3 +95,22 @@ listContainer.addEventListener('drop', (e) => {
     }
 })
 
+
+
+// listContainer.addEventListener('drop', (e) => {
+//     e.preventDefault()
+//     if (e.target.classList.contains('dropzone')){
+//         if (e.target != dragged){
+//             targetSibling = e.target
+//             targetSiblingIndex = Array.from(targetSibling.parentNode.childNodes).indexOf(targetSibling)
+//             console.log(targetSiblingIndex)
+//             dragged.parentNode.removeChild(dragged)
+//             if (draggedIndex < targetSiblingIndex){
+//                 targetSibling.after(dragged)
+//             } else {
+//                 targetSibling.before(dragged)
+//             }
+//             targetSibling.classList.remove('dragover')
+//         }
+//     }
+// })
