@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "League Spartan", sans-serif;
+}
+.main-section {
+    border: 1px solid black;
+    height: 400px;
+    margin: 20% 5%;
+    text-align: center;
+}
+.main-heading {
+    margin-top: 1rem;
+}
+#input-form {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 10%;
+}
+.input-field {
+    height: 24px;
+    font-size: 1rem;
+    padding-left: 1rem;
+    margin-bottom: 0.5rem;
+}
+.input-btn {
+    padding: 5px;
+}
+.todo-item-div {
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 32px;
+    margin: 1rem 10%;
+}
+.todo-item-text {
+    margin: 4px 0 0 1rem;
+}
+.fa-solid {
+    cursor: pointer;
+    margin-right: 1rem;
+}
