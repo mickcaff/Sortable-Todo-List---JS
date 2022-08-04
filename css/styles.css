@@ -103,6 +103,18 @@ body {
     cursor: pointer;
     margin: 0 10px;
 }
+.attribution {
+    color: var(--heading1);
+    background-color: var(--neutral1);
+    width: 100vw;
+    height: 3rem;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+}
+.attribution p {
+    padding-top: 5px;
+}
 
 @media (min-width: 250px) {
     .todo-item-text {
