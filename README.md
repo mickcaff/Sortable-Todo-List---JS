@@ -2,7 +2,7 @@
 
 This is a small sortable To-Do list that I completed in our 3rd week of learning JavaScript at the Coder Academy Web Development Bootcamp. 
 
-I chose to build this project to help consolidate the content we have learnt in regards to DOM manipulation and Event Handling. The To-Do list can be sorted using Drag and Drop which was a good fun to implement.  
+I chose to build this project to help consolidate the content we have learnt in regards to DOM manipulation and Event Handling. The To-Do list can be sorted using Drag and Drop which was fun to implement.  
 
 
 
