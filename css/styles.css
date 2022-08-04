@@ -29,12 +29,21 @@ body {
     margin: 20% 5%;
     text-align: center;
     background-color: white;
-    padding: 1rem 0 1.5rem;
+    padding: 0 0 1.5rem;
 
+}
+.heading-input-section {
+    background-image: url('../images/background-header-mobile.png');
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center;
+    border-radius: 1rem 1rem 0 0;
+    height: 150px;
+    margin-bottom: 0.5rem;
 }
 .main-heading {
     color: var(--heading1);
-    margin-top: 1rem;
+    padding-top: 3rem;
 }
 #input-form {
     display: flex;
@@ -50,7 +59,6 @@ body {
     width: 100%;
     font-size: 1rem;
     padding: 4px 0 0 1rem;
-    margin-bottom: 0.5rem;
 }
 .input-field::placeholder{
     color: var(--neutral2);
@@ -105,7 +113,7 @@ body {
     }
 }
 
-@media (min-width: 600px){
+@media (min-width: 400px){
     body {
         background-image: url('../images/background-desktop.svg');
         background-repeat: no-repeat;
@@ -115,5 +123,8 @@ body {
     .main-section {
         max-width: 400px;
         margin: 10% auto;
+    }
+    .heading-input-section {
+        background-image: url('../images/background-header.png');
     }
 }
