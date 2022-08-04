@@ -1,14 +1,14 @@
-# Sortable ToDo List - JavaScript
+# Sortable To-Do List - JavaScript
 
-This is a small sortable ToDo list that I completed in our 3rd week of learning Javascript at the Coder Academy Web Development Bootcamp. 
+This is a small sortable To-Do list that I completed in our 3rd week of learning JavaScript at the Coder Academy Web Development Bootcamp. 
 
-I chose to build this project to help cosolidate the content we have learnt in regards to DOM manipulation and Event Handling. The ToDo list can be sorted using Drag and Drop which was a fun feature to implement.  
+I chose to build this project to help consolidate the content we have learnt in regards to DOM manipulation and Event Handling. The To-Do list can be sorted using Drag and Drop which was a good fun to implement.  
 
 
 
 ## Table of contents
 
-- [Sortable ToDo List - JavaScript](#sortable-todo-list---javascript)
+- [Sortable To-Do List - JavaScript](#sortable-to-do-list---javascript)
   - [Table of contents](#table-of-contents)
   - [Overview](#overview)
     - [The challenge](#the-challenge)
@@ -33,7 +33,7 @@ I chose to build this project to help cosolidate the content we have learnt in r
 Users should be able to:
 
 - View the optimal layout for the app depending on their device's screen size
-- Add & remove ToDo list items to the list
+- Add & remove To-Do list items
 - Sort items using Drag and Drop (only on desktop)
 
 ### Links
@@ -64,16 +64,16 @@ Mobile View
 
 ### What I learned
 
-I completed this small challenge to help consolidate JavaScipt content that we have recently learnt in the Coder Academy Bootcamp.
+I completed this small challenge to help consolidate JavaScript content that we have recently learnt in the Coder Academy Bootcamp.
 
 My main goal for this challenge was to better learn how to implement the Drag and Drop feature. Key learnings that helped me implement this feature were:
 - The different Drag and Drop events. [MDN Drag Event](https://developer.mozilla.org/en-US/docs/Web/API/Document/drag_event)
-- I used the Element.before() & .after() methods to insert the dragged item into it's new position. [MDN Element.before()](https://developer.mozilla.org/en-US/docs/Web/API/Element/before)
+- I used the Element.before() & .after() methods to insert the dragged item into its new position. [MDN Element.before()](https://developer.mozilla.org/en-US/docs/Web/API/Element/before)
 
 
 ### Continued development
 
-In the following weeks we will be learning about connecting to third party APIs, Promises & Classes.
+In the following weeks, we will be learning about connecting to third-party APIs, Promises & Classes.
 
 Following on from that, we will be learning React, and I'll continue to attempt small projects and challenges like this one each week.
 
@@ -83,7 +83,7 @@ Following on from that, we will be learning React, and I'll continue to attempt 
 ### Illustrations
 
 - Illustrations are from [Storyset](https://storyset.com/work)
-- Free for personal and commercial purpose with attribution.
+- Free for personal and commercial purposes with attribution.
 
 
 ### Font
@@ -104,7 +104,7 @@ Following on from that, we will be learning React, and I'll continue to attempt 
 
 ## Acknowledgements
 
-- A big thanks to Pang & Iryna who are our classes instuctors at [Coder Academy](https://www.coderacademy.edu.au/)
+- A big thanks to Pang & Iryna who are our class instructors at [Coder Academy](https://www.coderacademy.edu.au/)
 
 
 
