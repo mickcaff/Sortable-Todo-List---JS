@@ -11,7 +11,6 @@ I chose to build this project to help consolidate the content we have learnt in 
 - [Sortable To-Do List - JavaScript](#sortable-to-do-list---javascript)
   - [Table of contents](#table-of-contents)
   - [Overview](#overview)
-    - [The challenge](#the-challenge)
     - [Links](#links)
     - [Screenshot](#screenshot)
   - [My process](#my-process)
@@ -27,8 +26,6 @@ I chose to build this project to help consolidate the content we have learnt in 
 
 
 ## Overview
-
-### The challenge
 
 Users should be able to:
 
