@@ -1,4 +1,3 @@
-
 const inputForm = document.querySelector('#input-form')
 const listContainer = document.querySelector('.todo-list-container')
 
@@ -106,61 +105,51 @@ listContainer.addEventListener('dragover', (e) => {
     e.preventDefault()
 })
 
-// Below is the log for the Drop event
-// Needs refactoring
-listContainer.addEventListener('drop', (e) => {
+
+// Below is the logic for the Drop event
+
+// dropSwapItems, is called by dropConditionals 
+// begins by getting the index of the target sibling
+// then the dragged item is removed 
+// the dragged item index and target sibling index are compared
+// depending on the index the dragged item is re-inserted back into the HTML either before or after the target
+// finally the styling which uses the class 'dragover' is removed
+const dropSwapItems = (target) => {
+    targetSiblingIndex = Array.from(target.parentNode.childNodes).indexOf(targetSibling)
+    dragged.parentNode.removeChild(dragged)
+    if (draggedIndex < targetSiblingIndex){
+        targetSibling.after(dragged)
+    } else {
+        targetSibling.before(dragged)
+    }
+    targetSibling.classList.remove('dragover')
+}
+
+// dropConditionals logic relates to the how the html elements of each of the to-do list items are placed on top of each other in the z-index
+// due to the target container 'dropzone' being beneath the text and up-down arrows icon 
+// the text and icon also needed to be included in potential targets
+// the logic first checks that the target has the classes of either dropzone, todo-item-text or fa-right-left
+// in the case of the todo-item-text and icon, the targetSibling is the parentNode of the target
+// dropSwapItems is then called in both cases
+const dropConditionals = (e) => {
     e.preventDefault()
     if ((e.target.classList.contains('dropzone')) || (e.target.classList.contains('todo-item-text')) || (e.target.classList.contains('fa-right-left'))) {
         if ((e.target != dragged) && (e.target.classList.contains('dropzone'))){
             targetSibling = e.target
-            targetSiblingIndex = Array.from(targetSibling.parentNode.childNodes).indexOf(targetSibling)
-            console.log(targetSiblingIndex)
-            dragged.parentNode.removeChild(dragged)
-            if (draggedIndex < targetSiblingIndex){
-                targetSibling.after(dragged)
-            } else {
-                targetSibling.before(dragged)
-            }
-            targetSibling.classList.remove('dragover')
+            dropSwapItems(targetSibling)
         }
         if ((e.target != dragged) && ((e.target.classList.contains('todo-item-text')) || (e.target.classList.contains('fa-right-left')))){
             targetSibling = e.target.parentNode
-            targetSiblingIndex = Array.from(targetSibling.parentNode.childNodes).indexOf(targetSibling)
-            console.log(targetSiblingIndex)
-            dragged.parentNode.removeChild(dragged)
-            if (draggedIndex < targetSiblingIndex){
-                targetSibling.after(dragged)
-            } else {
-                targetSibling.before(dragged)
-            }
-            targetSibling.classList.remove('dragover')
+            dropSwapItems(targetSibling)
         }
     }
-})
+}
+
+listContainer.addEventListener('drop', dropConditionals)
 
 // module.exports = {
 //     addItem,
 //     getItemValue
 // }
-
-
-// listContainer.addEventListener('drop', (e) => {
-//     e.preventDefault()
-//     if (e.target.classList.contains('dropzone')){
-//         if (e.target != dragged){
-//             targetSibling = e.target
-//             targetSiblingIndex = Array.from(targetSibling.parentNode.childNodes).indexOf(targetSibling)
-//             console.log(targetSiblingIndex)
-//             dragged.parentNode.removeChild(dragged)
-//             if (draggedIndex < targetSiblingIndex){
-//                 targetSibling.after(dragged)
-//             } else {
-//                 targetSibling.before(dragged)
-//             }
-//             targetSibling.classList.remove('dragover')
-//         }
-//     }
-// })
-
 
 
