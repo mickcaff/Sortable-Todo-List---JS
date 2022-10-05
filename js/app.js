@@ -147,9 +147,9 @@ const dropConditionals = (e) => {
 
 listContainer.addEventListener('drop', dropConditionals)
 
-// module.exports = {
-//     addItem,
-//     getItemValue
-// }
+module.exports = {
+    addItem,
+    getItemValue
+}
 
 

@@ -1,5 +1,9 @@
 # Sortable To-Do List - JavaScript
 
+#### Link
+
+- Live Site URL: [https://fascinating-sprinkles-79de92.netlify.app/](https://fascinating-sprinkles-79de92.netlify.app/)
+
 This is a small sortable To-Do list that I completed after a 3 week introduction to JavaScript at the Coder Academy Web Development Bootcamp. 
 
 I chose to build this project to help consolidate the content we have learnt in regards to DOM manipulation and Event Handling. The To-Do list can be sorted using Drag and Drop.  
@@ -9,9 +13,9 @@ I chose to build this project to help consolidate the content we have learnt in 
 ## Table of contents
 
 - [Sortable To-Do List - JavaScript](#sortable-to-do-list---javascript)
+        - [Link](#link)
   - [Table of contents](#table-of-contents)
   - [Overview](#overview)
-    - [Links](#links)
     - [Screenshot](#screenshot)
   - [My process](#my-process)
     - [Built with](#built-with)
@@ -33,9 +37,6 @@ Users should be able to:
 - Add & remove To-Do list items
 - Sort items using Drag and Drop (only on desktop)
 
-### Links
-
-- Live Site URL: [https://fascinating-sprinkles-79de92.netlify.app/](https://fascinating-sprinkles-79de92.netlify.app/)
 
 ### Screenshot
 
